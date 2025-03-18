@@ -9,7 +9,7 @@ export class AgentController {
   @Post("agent-invoke")
   async agentExample(
     @Body() body: { prompt: string; user_id: string }
-  ): Promise<MessageContent> {
+  ): Promise<any> {
     const { prompt, user_id } = body;
     return this.agentService.agentExample(user_id, prompt);
   }

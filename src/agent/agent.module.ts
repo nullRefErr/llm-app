@@ -1,12 +1,12 @@
 import { Module } from "@nestjs/common";
-import { ConfigModule, ConfigService } from "@nestjs/config";
-import { MongooseModule } from "@nestjs/mongoose";
 import { AgentService } from "./agent.service";
+import { AgentController } from "./agent.controller";
 
 @Module({
-  imports: [  ],
-  controllers: [],
-  providers: [AgentService],
-  exports: [AgentService],
+    imports: [],
+    controllers: [AgentController],
+    providers: [AgentService],
+    exports: [AgentService],
 })
-export class AgentModule {}
+export class AgentModule {
+}
